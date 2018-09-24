@@ -5,7 +5,7 @@ export default class Inventory extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="inventory">
                 <h1>Inventory</h1>
             </div>
         )

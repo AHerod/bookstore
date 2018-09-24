@@ -5,7 +5,7 @@ export default class Order extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="order">
                 <h1>Order</h1>
             </div>
         )

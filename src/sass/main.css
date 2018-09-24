@@ -1,2 +1,19 @@
+.adminPanel {
+  background-color: #554444; }
+
+.app {
+  background-color: #ee9988; }
+
+.header {
+  background-color: #ccaa77; }
+
+.inventory {
+  background-color: #ffdd99; }
+
+.order {
+  background-color: brown; }
+
 body {
-  background-color: coral; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }

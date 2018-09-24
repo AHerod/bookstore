@@ -9,7 +9,7 @@ import "../sass/main.css";
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="app">
                 <Header/>
                 <Order/>
                 <Inventory/>

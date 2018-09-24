@@ -1,3 +1,12 @@
+@import "components/adminPanel.scss";
+@import "components/app.scss";
+@import "components/header.scss";
+@import "components/inventory.scss";
+@import "components/orders.scss";
+
+
 body{
-  background-color: coral;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
