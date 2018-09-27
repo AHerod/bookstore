@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../App.css';
 import AdminPanel from "./AdminPanel";
 import Order from "./Order";
 import Header from "./Header";
@@ -10,10 +9,12 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <Header/>
-                <Order/>
-                <Inventory/>
-                <AdminPanel/>
+                <Header className="header"/>
+                <div className="wrapper-section">
+                    <Order className="order"/>
+                    <Inventory className="inventory"/>
+                    <AdminPanel/>
+                </div>
             </div>
         );
     }
