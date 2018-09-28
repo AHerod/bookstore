@@ -3,6 +3,7 @@ import AdminPanel from "./AdminPanel";
 import Order from "./Order";
 import Header from "./Header";
 import Inventory from "./Inventory";
+import BookView from "./BookView";
 import "../sass/main.css";
 
 class App extends Component {
