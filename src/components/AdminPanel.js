@@ -10,7 +10,8 @@ export default class AdminPanel extends React.Component {
                 author: "",
                 description: "",
                 onStock: true,
-                image: ""
+                image: "",
+                isbn: ""
             },
         };
     }
@@ -69,6 +70,9 @@ export default class AdminPanel extends React.Component {
                         <input type="checkbox" id="onStock" name="onStock" onChange={this.handleChange}
                                value={this.state.onStock}/>
                     </label>
+                    <input type="number" placeholder="ISBN" id="isbn" name="isbn" value={this.state.isbn}
+                           onChange={this.handleChange}/>
+
                     <input type="text" placeholder="image path" id="image" name="image" onChange={this.handleChange}
                            value={this.state.image}/>
                     <button type="submit" className="button-form-submit">Add</button>

@@ -3,14 +3,14 @@ import AdminPanel from "./AdminPanel";
 import Order from "./Order";
 import Header from "./Header";
 import Inventory from "./Inventory";
-import BookView from "./BookView";
 import "../sass/main.css";
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            books: []
+            books: [],
+            order: []
         }
     }
 
@@ -26,13 +26,26 @@ class App extends Component {
 
     }
 
+    addToOrder = (book) => {
+        this.setState({
+            order: [...this.state.order, book]
+        })
+    }
+
+    removeFromOrder = (title) => {
+        this.setState({
+            order: this.state.order.filter(book => title !== book.title )
+        })
+        console.log("DSasd")
+    }
+
     render() {
         return (
             <div className="app">
                 <Header className="header"/>
                 <div className="wrapper-section">
-                    <Order className="order"/>
-                    <Inventory className="inventory" books={this.state.books}/>
+                    <Order className="order" order = {this.state.order} removeFromOrder = {this.removeFromOrder}/>
+                    <Inventory className="inventory" books={this.state.books} addOrder = {this.addToOrder}/>
                     <AdminPanel books={this.state.books} addBook={this.addNewBook}/>
                 </div>
             </div>
