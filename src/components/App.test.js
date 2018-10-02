@@ -15,6 +15,11 @@ describe("App tests", () => {
         ReactDOM.unmountComponentAtNode(div);
 
     })
+    it('Snapshot matches', () => {
+        const wrapper = shallow(<App/>);
+        expect(wrapper).toMatchSnapshot();
+    })
+
     it("Child components renders", () => {
         const wrapper = shallow(<App/>);
         // console.log(wrapper.debug());

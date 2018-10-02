@@ -9,15 +9,17 @@ configure({adapter: new Adapter ()});
 
 describe("Inventory tests", () => {
 
-    it("App renders without a problem", ()=>{
-        const div = document.createElement("div");
-        ReactDOM.render(<Inventory />, div);
-        ReactDOM.unmountComponentAtNode(div);
 
+    it('Inventory renders without a problem', () => {
+        const div = document.createElement('div');
+        const books = [];
+        ReactDOM.render(<Inventory books={books}/>, div);
+        ReactDOM.unmountComponentAtNode(div);
     })
-    it("Header", ()=> {
-        const wrapper = shallow(<Inventory/>);
-        // console.log(wrapper.debug());
-        expect(wrapper.find("h1").text()).toBe("Inventory");
+
+    it('Snapshot matches', () => {
+        const books = [];
+        const wrapper = shallow(<Inventory books={books}/>);
+        expect(wrapper).toMatchSnapshot();
     })
 })
