@@ -9,21 +9,8 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            books: [],
             order: []
         }
-    }
-
-    addNewBook = (book) => {
-
-        let newBooks = [...this.state.books];
-
-        newBooks.push(book);
-
-        this.setState({
-            books: newBooks
-        })
-
     }
 
     addToOrder = (book) => {
@@ -46,7 +33,6 @@ class App extends Component {
                 <div className="wrapper-section">
                     <Order className="order" order = {this.state.order} removeFromOrder = {this.removeFromOrder}/>
                     <Inventory className="inventory" books={this.state.books} addOrder = {this.addToOrder}/>
-                    <AdminPanel books={this.state.books} addBook={this.addNewBook}/>
                 </div>
             </div>
         );

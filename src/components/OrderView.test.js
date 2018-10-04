@@ -11,7 +11,7 @@ describe('Order view tests', () => {
 
     it('Snapshot matches', () => {
         const book = {
-            title: "Book title"
+            name: "Book title"
         }
         const wrapper = shallow(<OrderView book={book}/>);
         expect(wrapper).toMatchSnapshot();
@@ -19,7 +19,7 @@ describe('Order view tests', () => {
 
     it('Title of the book is displayed as in props', () => {
         const book = {
-            title: "Book title"
+            name: "Book title"
         }
         const wrapper = shallow(<OrderView book={book}/>);
         expect(wrapper.find('.orderView').find('span').text()).toBe(book.name);

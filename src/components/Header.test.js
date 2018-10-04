@@ -18,7 +18,7 @@ describe("Header tests", () => {
     it('Header changes text according to state', () => {
         const wrapper = shallow(<Header/>);
         // console.log(wrapper.debug());
-        expect(wrapper.find('h1').text()).toBe('Black Books');
+        expect(wrapper.find('h1').text()).toBe('Header Some books');
         wrapper.setState({
             bookstoreName: "White Books"
         });

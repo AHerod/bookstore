@@ -50,7 +50,7 @@ export default class AdminPanel extends React.Component {
 
         let newBook = {...this.state.book};
 
-        this.props.addBook(newBook);
+        // this.props.addBook(newBook);
 
         event.currentTarget.reset();
     }
