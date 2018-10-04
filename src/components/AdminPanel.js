@@ -1,10 +1,11 @@
 import React from "react";
-
+import {fbase} from "../firebase";
 
 export default class AdminPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            books: [],
             book: {
                 title: "",
                 author: "",
@@ -52,9 +53,22 @@ export default class AdminPanel extends React.Component {
 
         // this.props.addBook(newBook);
 
+        this.setState({
+            books: [... this.state.books, newBook]
+        })
         event.currentTarget.reset();
     }
 
+    componentDidMount(){
+        this.ref = fbase.syncState("bookstore/books", {
+            context: this,
+            state: "books"
+        });
+    }
+
+    componentWillUnmount(){
+        fbase.removeBinding(this.ref)
+    }
     render() {
         return (
             <div className="adminPanel">
