@@ -14,7 +14,7 @@ export default class AdminPanel extends React.Component {
                 image: "",
                 isbn: ""
             },
-            loggedIn: false,
+            loggedIn: true,
             email: "",
             password: ""
         };
@@ -104,7 +104,7 @@ export default class AdminPanel extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="adminForm">
                 {!this.state.loggedIn &&
                     <form onSubmit={this.authenticate}>
                         <input type="text" placeholder="email" id="email" name="email" onChange={this.handleLoginChange} value={this.state.email}/>
@@ -122,15 +122,16 @@ export default class AdminPanel extends React.Component {
                                onChange={this.handleChange}/>
                         <textarea placeholder="Book description:" id="description" name="description"
                                   value={this.state.description} onChange={this.handleChange}/>
-                        <label htmlFor="onStock"> Book On Stock:
-                            <input type="checkbox" id="onStock" name="onStock" onChange={this.handleChange}
-                                   value={this.state.onStock}/>
-                        </label>
+
                         <input type="number" placeholder="ISBN" id="isbn" name="isbn" value={this.state.isbn}
                                onChange={this.handleChange}/>
 
                         <input type="text" placeholder="image path" id="image" name="image" onChange={this.handleChange}
                                value={this.state.image}/>
+                        <label htmlFor="onStock"> Book On Stock:
+                            <input type="checkbox" id="onStock" name="onStock" onChange={this.handleChange}
+                                   value={this.state.onStock}/>
+                        </label>
                         <button type="submit" className="button-form-submit">Add</button>
                     </form>
                 </div>

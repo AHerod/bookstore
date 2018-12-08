@@ -6,7 +6,7 @@ import {
     Route,
     Switch,
 } from 'react-router-dom';
-import App from "./App";
+import App from "../App";
 export default class Router extends React.Component {
 
     render(){

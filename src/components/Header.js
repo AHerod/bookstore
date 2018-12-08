@@ -6,13 +6,13 @@ export default class Header extends React.Component{
     constructor(){
         super();
         this.state = {
-            bookstoreName : "Some books"
+            bookstoreName : "Cheapy Cheap Books"
         }
     }
     render(){
         return (
             <div className="header">
-                <h1>Header {this.state.bookstoreName}</h1>
+                <h1> {this.state.bookstoreName}</h1>
                 <Link to="/admin"> Go to Admin Panel</Link>
             </div>
         )

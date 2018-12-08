@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import AdminPanel from "./AdminPanel";
-import Order from "./Order";
-import Header from "./Header";
-import Inventory from "./Inventory";
-import "../sass/main.css";
+import AdminPanel from "./components/AdminPanel";
+import Order from "./components/Order";
+import Header from "./components/Header";
+import Inventory from "./components/Inventory";
+import "./sass/main.css";
 
 class App extends Component {
     constructor() {

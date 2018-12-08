@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext");
 * {
   text-align: center;
   color: lightslategray; }
 
 body {
-  font-weight: bolder; }
+  font-weight: bolder;
+  font-family: "Montserrat', sans-serif"; }
 
 .app {
-  background-color: pink; }
+  background-color: red; }
 
 .header {
-  background-color: antiquewhite; }
+  background-color: black; }
 
 .wrapper-section {
   display: flex;
@@ -17,7 +19,7 @@ body {
   padding: 0 25px 15px 25px; }
 
 .inventory {
-  background-color: aquamarine;
+  background-color: palegreen;
   width: 50%; }
 
 .adminPanel form {
@@ -25,3 +27,18 @@ body {
   flex-direction: column; }
   .adminPanel form label {
     text-align: left; }
+
+.adminForm {
+  display: flex;
+  justify-content: center; }
+  .adminForm input, .adminForm textarea {
+    width: 500px;
+    height: 40px;
+    margin-top: 10px; }
+  .adminForm label {
+    font-size: 20px; }
+  .adminForm button {
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    background-color: blueviolet; }
